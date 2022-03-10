@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobilidade & Cidadania</title>
+</head>
+<body>
+    <h1>Mobilidade & Cidadania</h1>
+    <button onclick="carro()">Carro</button>
+    <button onclick="moto()">Moto</button>
+    <button onclick="bike()">Bike</button> <br> <br>
+    <span id="S_aparecer"></span>
+</body>
+</html>
+<script>
+    function carro() {
+     S_aparecer.innerHTML = `<img src=https://cdn.motor1.com/images/mgl/M1Ve4/s1/4x3/honda-hr-v-2020.webp style='height:150px'><br>
+     <span style='background-color:blue'><i>Carro</i> é o meio mais seguro, mas é o mais caro<span>`    
+    }
+    function moto() {
+     S_aparecer.innerHTML = `<img src=https://img0.icarros.com/dbimg/imgnoticia/4/28926_1 style='height:150px'><br>
+     <span style='background-color:blue'>O meio mais rápido é a <i>Moto</i>, mas é o mais perigoso<span>`    
+    }
+    function moto() {
+     S_aparecer.innerHTML = `<img src=https://img0.icarros.com/dbimg/imgnoticia/4/28926_1 style='height:150px'><br>
+     <span style='background-color:red; color:white'>O meio mais rápido é a <i>Moto</i>, mas é o mais perigoso<span>`    
+    }
+    function bike() {
+     S_aparecer.innerHTML = `<img src=https://brciclismo.com.br/wp-content/uploads/2020/05/bicicleta-de-ouro-24-k.jpg style='height:150px'><br>
+     <span style='background-color:yellow; color:blue'><b>A <i>Bike</i> é o meio mais econômico mas é o mais cansativo</b><span>`    
+    }
+</script>

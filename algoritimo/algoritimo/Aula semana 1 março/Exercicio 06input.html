@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notas</title>
+</head>
+<body>
+    <h2>Informe sua nota</h2>
+    <br>
+    <input id="notas" placeholder="Qual a sua nota" autofocus>
+    <button onclick="avo()">Opnião da avó</button>
+    <button onclick="mae()">Opnião da mae</button>
+    <span id="span_input"></span>
+
+</body>
+</html>
+<script>
+    function avo() {
+        span_input.innerHTML =`<h4>Muito bem, que neto inteligente, porque tirou ${notas.value} </h4><br><img src='https://pbs.twimg.com/profile_images/1609369512/vozinha_irene_400x400.jpg'>`
+    }
+    function mae() {
+        span_input.innerHTML =`<h4>Não fez mais que tua obrigação com essa nota ${notas.value} </h4><br><img src='http://3.bp.blogspot.com/-Rs5RupgwiIs/U4kaci6cGTI/AAAAAAAAKvk/IrZX3cvzMVU/s1600/M%C3%A3e+trabalhando_+Na+mira+da+mam%C3%A3e!.png'>`
+    }
+</script>

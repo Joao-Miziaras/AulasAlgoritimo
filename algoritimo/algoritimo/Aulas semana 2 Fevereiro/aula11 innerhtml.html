@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>innerhtml</title>
+</head>
+<body>
+    <p>
+        <h1>Olá, bom dia! Como vai? </h1>
+       <h2 id="b_estou"></h2>
+    </p><br>
+    <button onclick="estouBem()">Estou bem</button>
+    <button onclick="estouMal()">Estou mal</button>
+
+</body>
+</html>
+<script>
+    function estouBem() {
+        b_estou.innerHTML = "Olá vou bem"
+    }
+    function estouMal() {
+        b_estou.innerHTML= "Não irmão to mal";
+    }
+    // Podemos usar innerHTML. para alterar algum assunto do html, como no exemplo o <h2> para fazer as respostas
+    //É possivel deixar as mensagens com os efeitos do BIU, tanto como sem nada. 
+</script>

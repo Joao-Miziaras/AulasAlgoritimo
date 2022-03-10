@@ -1,0 +1,46 @@
+<!--
+    Input de forma concatenada
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>recebendo dados</title>
+</head>
+<body>
+    <div> <!-- div para inputs--> 
+        <p><h1>Insira suas informaçoes</h1></p>
+        Coloque o seu <b>primeiro nome</b>
+        <input id="primeiro"; placeholder="primeiro nome" autofocus> <br>
+        Coloque seu <b>ultimo nome</b>
+        <input id="segundo"; placeholder="ultimo nome">
+    </div>
+    <br>
+    <div style="width: 15%;">
+        <button onclick="Mostrar()" style="float: right ;">enviar</button> <br> <br>
+        Seu nome é <span id="s_nome"></span>
+    </div>
+</body>
+</html>
+<script>
+    function Mostrar() {
+        alert ('seu nome é '+primeiro.value+' '+ segundo.value);
+        s_nome.innerHTML = primeiro.value+ ' '+ segundo.value;
+
+        primeiro.value =("")
+        segundo.value=("")
+    }
+</script>
+<!--
+    Tag input serve para receber os dados os quais o usuario informar 
+        type para receber texto que sera usado agora será o text
+        Atributos: placeholder(espaço para se dar uma mensagem que ira sumir quando escreverem como 'email'),
+        autofocus,
+
+-->
+<!--
+    Botão direito/ formatar documento
+        issp serve para alinhar todo o documento
+-->

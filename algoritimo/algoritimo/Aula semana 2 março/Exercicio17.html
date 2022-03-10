@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora do timista</title>
+</head>
+<body>
+    <h4>insira dinheiro colocado por Huguinho</h4>
+    <input id="hugo"> <br>
+    <h4>insira dinheiro colocado por Zezinho</h4>
+    <input id="ze"> <br>
+    <h4>insira dinheiro colocado por luizinho</h4>
+    <input id="lu"> <br> <br>
+    <button onclick="calculoH()">calcular Huguinho </button> 
+    <button onclick="calculoZ()">calcular Zezinho </button> 
+    <button onclick="calculoL()">calcular Luizinho </button> <br>
+    <span id="revelar"></span>
+   
+</body>
+</html>
+<script>
+    function calculoH() {
+        revelar.innerHTML += `O <B><span style='color:red'>Huguinho</span></b> economizou <b>R$${hugo.value * 0.50} </b>pois fez <b>${hugo.value}</b>depositos <br>`
+           
+    }
+    function calculoZ() {
+        revelar.innerHTML += ` O <B><span style='color:blue'>Zézinho</span></b> economizou <b>R$${ze.value * 0.50} </b>pois fez <b>${ze.value}</b>depositos <br>`
+           
+    }
+    function calculoL() {
+        revelar.innerHTML += ` O <B><span style='color:green'>Luizinho</span></b> economizou <b>R$${lu.value * 0.50} </b>pois fez <b>${lu.value}</b>depositos `
+           
+    }
+</script>

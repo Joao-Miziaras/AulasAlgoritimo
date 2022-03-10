@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transito</title>
+</head>
+<body>
+    <button onclick="pare()">pare</button>
+    <button onclick="pense()">pense</button>
+    <button onclick="siga()">siga</button>
+    <div id="div_add"></div>
+</body>
+</html>
+<script>
+    function pare() {
+        div_add.innerHTML = "Pare e aguarde<br>";
+        div_add.style.background ="red";
+        div_add.style.color ="white";
+    }
+    function pense(){
+        div_add.innerHTML = "Pense se pode seguir ou deve parar<br>";
+        div_add.style.background="black";
+        div_add.style.color="yellow";
+    } 
+    function siga(){
+        div_add.innerHTML= "Pode seguir adiante<br>";
+        div_add.style.background="white";
+        div_add.style.color="green";
+    }
+</script>

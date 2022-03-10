@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>input1</title>
+</head>
+<body>
+    <div>
+        <h3>Cidade natal</h3>
+        <input id="add_cidade" placeholder="Cidade natal" autofocus> <br>
+        <h3>Ano de nascimento</h3>
+        <input id="add_ano" placeholder="Ano de nascimento"> <br>
+
+    </div> <br>
+    <div>
+        <button onclick="cadastra()">Cadastrar</button>
+    </div>
+</body>
+</html>
+<script>
+    function cadastra() {
+        //alert('você nasceu na cidade '+ add_cidade.value+ ' no ano de '+ add_ano.value);
+        alert(`Você nasceu na cidade ${add_cidade.value} no ano de ${add_ano.value}`)
+    }
+</script>

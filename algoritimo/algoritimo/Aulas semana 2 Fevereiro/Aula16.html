@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esconder um botao</title>
+</head>
+<body>
+    <h1>Existem segredos nesta pagina</h1> <br> <br>
+    <button id="botao" onclick="mostrar()">mostar um segredo</button>
+    <button id="button_esconder" style="display: none;" onclick="esconder()">Esconder</button> <br> <br>
+    <h4 id="h4_esconder" style="display: none;">Segredo</h4>
+</body>
+</html>
+<script>
+    function mostrar() {
+        button_esconder.style.display= "block";
+        h4_esconder.style.display= "block";
+        botao.style.display="none";
+        h4_esconder.style.color= "blue"
+    }
+    function esconder() {
+        h4_esconder.style.display= "none";
+        button_esconder.style.display="none";
+        botao.style.display= "block";
+        
+    }
+    // Pode ser feito diversas açoes com diversas tags.
+</script>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>triatletismo</title>
+</head>
+<body>
+    <h1>O que faz um triatleta?</h1>
+    <button onclick="nadar()">nada</button>
+    <button onclick="correr()">corre</button>
+    <button onclick="pedalar()">pedala</button> <br> <br>
+    <div id="fotos" style="display: none;"></div>
+</body>
+</html>
+<script>
+    function nadar() {
+        fotos.style= "display: block"
+        fotos.innerHTML = "<img src='http://www.unimedfortaleza.com.br/portaluploads/uploads/2017/01/mulher-nadando-piscina.jpg' style='height: 200px; width: 300px' >"
+    }
+    function correr() {
+        fotos.style= "display: block"
+        fotos.innerHTML = "<img src='https://static.atletis.com.br/assets/base/dc9/60c/46c/como-correr-corretamente.jpg' style='height: 200px' >"
+    }
+    function pedalar() {
+        fotos.style= "display: block"
+        fotos.innerHTML = "<img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQW8t6dfHt-U_zg3heRj9pVl6u4P6SqcJ1vgQ&usqp=CAU' style='height: 200px' >"
+    }
+</script>

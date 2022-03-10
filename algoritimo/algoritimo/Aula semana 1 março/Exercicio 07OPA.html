@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Média</title>
+</head>
+<body>
+    <h2>Calculadora de médias para alunos sptech</h2>
+    <h3>Informe seu nome</h3>
+    <input id="nome" placeholder="Nome"> <br>
+    <h3>Informe suas notas</h3>
+    <input id="continuada" placeholder="Avaliação continuada"> <br> <br>
+    <input id="semestral" placeholder="Avaliação semestral"> <br> <br>
+    <button onclick="calcularMedia()">Enviar notas e nome</button>
+    <span id="span_resultado"></span>
+</body>
+</html>
+<script>
+    function calcularMedia(){
+        span_resultado.innerHTML =`<br> <br> <B>A média de ${nome.value} será de ${(continuada.value /100 * 40) + (semestral.value/100 *60) }<b>`
+    }
+</script>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aposentadoria</title>
+</head>
+<body>
+    <h1>Digite sua idade</h1>
+    <button onclick="homem()">Aposentadoria homem</button>
+    <button onclick="mulher()">Aposentadoria mulher</button>
+    <span id="span_calculo"></span> 
+    
+</body>
+</html>
+<script>
+    function homem() {
+        span_calculo.innerHTML=`<h3>Informe quantos anos trabalha</h3> <br> <input id='idade_homem'> <button onclick='subtraçaoH()'>Calcular</button> <br> <span id="span_resultado"></span>`
+    }
+    function subtraçaoH(){
+        span_resultado.innerHTML = `<br><span style="color:green">O tempo até sua aposentadoria é <b>${70-idade_homem.value}</b></span>`
+    }
+    function mulher() {
+        span_calculo.innerHTML=`<h3>Informe quantos anos trabalha</h3> <br> <input id='idade_mulher'> <button onclick='subtraçaoM()'>Calcular</button> <br> <span id="span_resultado"></span>`
+    }
+    function subtraçaoM(){
+        span_resultado.innerHTML = `<br><span style="color:pink">O tempo até sua aposentadoria é <b>${60-idade_mulher.value}</b></span>`
+    }
+</script>

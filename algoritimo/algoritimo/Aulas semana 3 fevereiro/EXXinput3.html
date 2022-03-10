@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6</title>
+</head>
+<body>
+    <h2>Cadastro do endereço</h2>
+    Entre com o logradouro
+    <input type="text" id="ipt_logradouro" placeholder="logradouro" autofocus> <br> <br>
+    Entre com o numero:
+    <input id="ipt_numero" placeholder="numero"> <br> <br>
+    <button onclick="cadastrar()">Cadastrar </button> <br> <br>
+    Cadastro de endereço <br>
+    <span id="span_end"></span>
+</body>
+</html>
+<script>
+    function cadastrar() {
+        span_end.innerHTMl +=`Seu logradouro é ${ipt_logradouro.value}`;
+        span_end.innerHTMl += "Seu numero é "+ipt_numero.value+ "<br>";
+    }
+</script>

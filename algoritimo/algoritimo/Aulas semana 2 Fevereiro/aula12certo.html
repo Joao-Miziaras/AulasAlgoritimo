@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aula12</title>
+</head>
+<body>
+    <button onclick="fruta()">frutas</button>
+    <button onclick="carne()">carnes</button>
+    <button onclick="legume()">legume</button>
+    <button onclick="doce()">doces</button>
+    <button onclick="apagar()">apagar</button>
+    <h1>Lista de compras</h1> <br>
+    <div id="lista_add"></div>
+</body>
+</html>
+<script>
+    function fruta() {
+        lista_add.innerHTML += "frutas<br>"    
+    }
+    function legume() {
+        lista_add.innerHTML += "legumes<br>"
+    }
+    function carne() {
+        lista_add.innerHTML += "carnes<br>"
+    }
+    function doce() {
+        lista_add.innerHTML += "doces<br>"
+    }
+    function apagar() {
+        lista_add.innerHTML = ""
+    }
+    /* O innerHTML = muda os itens do id ao todo, logo tudo que foi atribuido(exemplo o apagar)
+    O innerHTML com += apenas adiciona itens denominados */ 
+</script>

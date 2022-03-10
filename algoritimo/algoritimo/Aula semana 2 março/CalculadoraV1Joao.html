@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora financeira</title>
+</head>
+<body>
+    <h1>Calculadora de Perdas caso aconteça inatividade em seu datacenters</h1>
+    <h3>Estes calculos são baseados nas informações por minuto de inatividade, logo a cada minuto para um datacenter de grande porte a perda será de 9000 Dolars.
+    </h3>
+    <h3>Escreva o tempo perdido em minutos</h3>
+    <input id="in_tempo" autofocus> <br>
+    <h3>Escolha o botão baseado no tamanho médio de seu datacenters</h3>
+    <Button onclick="pequena()">pequeno</Button>
+    <Button onclick="media()">medio</Button>
+    <Button onclick="grande()">grandes</Button>
+    <h3 id="revelar"></h3>
+</body>
+</html>
+<script>
+    function pequena() {
+        revelar.innerHTML = `Os danos financeiros baseados no tempo de inatividade são ${in_tempo.value *3000} dolars`
+        
+    }
+    function media() {
+        revelar.innerHTML = `Os danos financeiros baseados no tempo de inatividade são ${in_tempo.value *6000} dolars`
+        
+    }
+    function grande() {
+        revelar.innerHTML = `Os danos financeiros baseados no tempo de inatividade são ${in_tempo.value *9000} dolars`
+        
+    }
+</script>

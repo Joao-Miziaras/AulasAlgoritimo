@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>alerts</title>
+</head>
+<body>
+    <button onclick="alert1()">Boas vindas no alerta</button>
+    <button onclick="alert2()">Boas vindas na pagina</button>
+    <div id="div_add" style="display: none;"></div>
+</body>
+</html>
+<script>
+    function alert1() {
+        alert("boas vindas");
+    }
+    function alert2() {
+        div_add.style ="display:block"
+        div_add.innerHTML = "<spam style=' background: black; color:yellow';>Boas vindas :)</spam>"
+
+    }
+    
+</script>

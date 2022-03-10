@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escondido</title>
+</head>
+<body>
+    <h1>paradas invisiveis</h1>
+    <br>
+    <p>Existem segredos aqui</p>
+    <br>
+    <button onclick="mostrar()">mostrar o segredo</button>
+    <button onclick="esconderOsSegredos()">Esconde</button>
+    <h4 id="h4_segredo" style="display: none;">sou o segredo</h4>    
+    
+</body>
+</html>
+<script>
+    function mostrar() { 
+        h4_segredo.style.display ="block";
+        
+    }
+    function esconderOsSegredos() {
+        h4_segredo.style.display ="none";
+        
+    }
+</script>
+<!--
+    display none: deixa invisivel a tag
+    displau block : torna a taga visivel
+-->
+<!--
+    Para fazer modificações no style de alguma tela via o java script tem que usar o idDaTag.style.parametroQueDesejaAlterar.
+-->

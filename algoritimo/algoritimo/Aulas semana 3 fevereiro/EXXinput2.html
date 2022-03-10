@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>input2</title>
+</head>
+<body>
+    <div>
+        <h3>Cidade natal</h3>
+        <input id="add_cidade" placeholder="Cidade natal" autofocus> <br>
+        <h3>Ano de nascimento</h3>
+        <input id="add_ano" placeholder="Ano de nascimento"> <br>
+
+    </div> <br>
+    <div>
+        <button onclick="cadastra()">Cadastrar</button>
+    </div> <br> <br>
+    
+    <spam id="s_escrito"></spam>
+</body>
+</html>
+<script>
+    function cadastra() {
+       //s_escrito.innerHTML= 'Você nasceu na cidade<b> '+ add_cidade.value+ ' </b> no ano de<u> '+ add_ano.value+'</u>';
+        s_escrito.innerHTML=`Você nasceu na cidade <b>${add_cidade.value}</b> no ano de <u>${add_ano.value}</u>`
+    }
+</script>

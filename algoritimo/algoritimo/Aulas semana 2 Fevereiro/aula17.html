@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Tempora de São Paulp</h1>
+    <button onclick="nublado()">Ensolarado</button>
+    <button  onclick="ensolarado()">Nublado</button> <br> <br>
+    <img id="imagem" src="" style= "width: 300px; height: 300px; display: none;">
+    
+</body>
+</html>
+<script>
+    function nublado() {
+        imagem.src= "https://imagens.climatempo.com.br/climapress/galeria/2019/04/ffdb3e4f44fbd7e3faaf123fff10f052.jpg";
+        imagem.style.display ="block"
+
+        
+    }
+    function ensolarado() {
+        imagem.src ="https://cdn.crello.com/api/media/small/206388680/stock-photo-full-frame-image-cloudy-sky";
+        imagem.style.display ="block"
+        
+    }
+</script>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora do timista</title>
+</head>
+<body>
+    <h4>Insira quantidade de casquinha</h4>
+    <input id="casquinha"> <br>
+    <h4>Insira quantidade de pão francês</h4>
+    <input id="pao"> <br>
+    <h4>Insira o tempo de caminhada</h4>
+    <input id="cami"> <br>
+    <h4>Insira o tempo de musculação</h4>
+    <input id="musc"> <br> <br>
+    <button onclick="calculo()">calcular</button> <br> <br> 
+    <img src="https://img.kalunga.com.br/FotosdeProdutos/159003d.jpg" style="height: 200px;"> <br>
+    <span id="revelar" style="background-color: red; color:white;"></span>
+    <!-- No exercicio estava escrito fundo velho só que subentendi que era vermelho-->
+   
+</body>
+</html>
+<script>
+    function calculo() {
+        revelar.innerHTML = `Entre calorias que ganhou e perdeu, seu saldo de calorias no dia é de ${(Number(cami.value)+Number(musc.value))-(Number(casquinha.value)  + Number(pao.value))}`
+    }
+</script>
