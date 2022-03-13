@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio23</title>
+</head>
+<body>
+    <button><img src="https://33giga.com.br/wp-content/uploads/2020/08/1.-Madonna-240x300.jpg" onclick="madonna()" style="height: 150px;"></button>
+    votos:<b id="b_mad">0</b> <br> <br>
+    <button><img src="https://33giga.com.br/wp-content/uploads/2020/08/2.-Mariah-Carey-240x300.jpg" onclick="mari()" style="height: 150px;"></button>
+    votos: <b id="b_mari">0</b> <br>
+    Total de votos: <b id="b_total">0</b>
+</body>
+</html>
+<script>
+    var madonaVar = 0;
+    var mariaVar = 0;
+    var total = 0;
+    function madonna(){
+        madonaVar = madonaVar + Number(1)
+        total = total+ Number(1)
+        b_mad.innerHTML = madonaVar
+        b_total.innerHTML = total
+    }
+    function mari(){
+        mariaVar = mariaVar + Number(1)
+        total = total+ Number(1)
+        b_mari.innerHTML = mariaVar
+        b_total.innerHTML = total
+    }
+</script>
+<!--
+    23.	Crie um programa que simula uma mini urna eletrônica de votação entre 2 cantores assim:
+a) Exiba na tela, logo de início
+	* a foto de um(a) cantor(a) e, do seu lado, o texto: "Votos: 0"
+	* abaixo da foto anterior, outra foto de um(a) cantor(a) e, do seu lado, o texto: "Votos: 0"
+	* abaixo das 2 fotos, o texto "Total de votos: 0"
+b) Ao clicar em uma das fotos, aumente o contador ao seu lado em 1. Atualize essa informação na tela
+c) Independente do voto, atualize o total de votos em 1 e atualize essa informação na tela
+OBS: Tenha as fotos com 150px de altura
+#FicaDica: O atributo onclick pode estar presente em <img>, assim como em <button>
+
+-->

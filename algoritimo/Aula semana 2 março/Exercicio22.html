@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio22</title>
+</head>
+<body>
+    <p style="color: green;">
+        Votos na <u>Praça é Nossa</u>: <b id="b_votosPN">0</b> <br>
+        Votos no <u>Zorra Total</u>: <b id="b_votosZT">0</b> <br>
+        Total de Votos: <b id="b_totalVotos">0</b>
+    </p>
+    <button onclick="v_PN()">Votos Praça é Nossa</button>
+    <button onclick="v_ZT()">Votos Zorra Total</button>
+</body>
+</html>
+<script>
+    var pn = 0;
+    var zt = 0;
+    var total = 0;
+    function v_PN() {
+        pn = pn + Number(1);
+        total = total + Number(1);
+        b_votosPN.innerHTML = pn;
+        b_totalVotos.innerHTML = total
+    }
+    function v_ZT() {
+        zt = zt + Number(1);
+        total = total + Number(1);
+        b_votosZT.innerHTML = zt;
+        b_totalVotos.innerHTML = total
+    }
+
+</script>

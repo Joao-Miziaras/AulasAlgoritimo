@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio20</title>
+</head>
+<body>
+    Qual é o seu salario? <br>
+    <input type="text" id="salario"> <br> <br>
+    <button onclick="subSalario()">Confirmar salario</button> 
+    <button onclick="pagar100()">Pagar conta de 100</button> 
+    <button onclick="pagar500()">Pagar conta de 500</button> 
+    <button onclick="ganharLot()">Ganhar 2000</button> <br>
+    <p id="p_revelar" style="display: none;">Grana atual <span id="dinheiro"></span></p>
+</body>
+</html>
+<script>
+    var dinheiroVar=0
+    dinheiro.innerHTML = dinheiroVar
+    function subSalario() {
+        p_revelar.style.display ="block"
+        dinheiroVar = salario.value
+        dinheiro.innerHTML = dinheiroVar
+
+    }
+    function pagar100() {
+        dinheiroVar = dinheiroVar - 100
+        dinheiro.innerHTML = dinheiroVar
+    };
+    function pagar500() {
+        dinheiroVar = dinheiroVar - 500
+        dinheiro.innerHTML = dinheiroVar
+    }
+    function ganharLot() {
+        dinheiroVar= dinheiroVar + 2000
+        dinheiro.innerHTML= dinheiroVar
+    }
+    
+
+</script>
+
+
+
+<!--
+    20.	Crie um programa o qual:
+a) Pergunte qual o salário do usuário
+b) Tenha um botão "Confirmar salário". Ao ser clicado, ele deixe aparecendo na tela uma frase assim "Grana atual: R$X.XX"
+c) Tenha um botão "Pagar conta de 100", que, ao ser clicado, ele reduza a "Grana atual" em 100 e atualize essa informação na tela
+d) Tenha um botão "Pagar conta de 500", que, ao ser clicado, ele reduza a "Grana atual" em 500 e atualize essa informação na tela
+e) Tenha um botão "Ganhar 2000 na loteria", que, ao ser clicado, ele aumente a "Grana atual" em 2000 e atualize essa informação na tela
+
+-->
