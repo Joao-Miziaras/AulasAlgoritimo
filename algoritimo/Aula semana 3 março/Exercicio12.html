@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio12</title>
+</head>
+<body>
+    Quantas horas de sono você teve
+    <input type="text" id="hSono"> <br>
+    <button onclick="calculoSono()">Calcular Sono</button> <br>
+    <div id="revelar"></div>
+</body>
+</html>
+<script>
+    function calculoSono(){
+        var calculo1 = (hSono.value) *5 / 100
+        var calculo2 = (hSono.value) *45 / 100
+        var calculo3 = (hSono.value) *30 / 100
+        var calculo4 = (hSono.value) *20 / 100
+
+        revelar.innerHTML= `${calculo1} horas na <b>fase 1</b> <br>
+                            ${calculo2} horas na <B>fase 2</b> <br>
+                            ${calculo3} horas na <b>fase 3<b> <br>
+                            ${calculo4} horas na <b> fase REM</b> <br>`
+    }
+</script>

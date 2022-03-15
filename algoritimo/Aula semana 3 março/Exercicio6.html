@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio6</title>
+</head>
+<body>
+<p>
+    Escreva seu nome
+    <input id="nome"> <br>
+    Escreva a quantidade total de aula do curso
+    <input id="qtdTotalAula"> <br>
+    Escreva a quantidae de aulas que você faltou
+    <input id="qtdFaltas"> <br>
+    <button onclick="frequencia()">Calcular frequencia</button> <br>
+    <span id="revelarTudo"></span> <br>
+    <div id="divVermelho" style="background-color: red; display: none; color: red;" >´</div>
+
+</p>
+
+    
+</body>
+</html>
+<script>        
+    var divMod=0;
+    function frequencia(){    
+        var calculo = ((qtdTotalAula.value)-(qtdFaltas.value))/(qtdTotalAula.value) *100;
+        revelarTudo.innerHTML =`Olá ${nome.value} sua frequencia foi de ${calculo}%`
+
+        divVermelho.style.display = "block";
+        divVermelho.style.height= calculo;
+
+    }
+</script>

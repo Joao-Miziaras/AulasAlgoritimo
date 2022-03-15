@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercico19</title>
+</head>
+<body>
+    <button onclick="pas08()">08 passagens</button> <br>
+    <button onclick="pas20()">20 passagens</button> <br>
+    <button onclick="pas50()">50 passagens</button> <br>
+    <div id="revelar"></div>
+</body>
+</html>
+<script>
+    function pas08(){
+        var calculo08= ((35.20/ 32.45)-1) *100;
+        var calculo08Z = 35.20 -32.45
+        revelar.innerHTML = `Ao comprar <b>08</b> passagens, você pagou <b>${calculo08}</b>% a menos. Ganhou <b>${calculo08Z}</b> de passagens com o "bônus". `
+        
+    }
+</script>
