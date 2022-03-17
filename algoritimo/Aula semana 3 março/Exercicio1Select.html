@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>preços</title>
+</head>
+<body>
+    <select name="lista" id="listaCompras">
+        <option value="5.60">leite</option>
+        <option value="4.10">farinha</option>
+        <option value="1.00">pao</option>
+        <option value="10.50">azeite</option>
+    </select>
+    <button onclick="pesquisar()">pesquisar</button>
+</body>
+</html>
+<script>
+    function pesquisar() {
+        alert(`Isso custa: R$:${listaCompras.value}`)
+    }
+</script>

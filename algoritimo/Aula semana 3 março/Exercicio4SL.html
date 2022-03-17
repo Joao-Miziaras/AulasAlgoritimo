@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oração</title>
+</head>
+<body>
+    <h1>Oração</h1>
+    <select id="oraçao">
+        <option value="que eu leve amor">Onde Houver ódio</option>
+        <option value="que eu leve esperança">Onde Houver desespero</option>
+        <option value="que eu leve a bondade">Onde Houver maldade</option>
+        <option value="que eu leve os bons momentos">Onde Houver desgraça</option>
+
+    </select>
+    <br>
+    <button onclick="orar()">Ore</button>
+</body>
+</html>
+<script>
+    function orar(){
+        alert(`${oraçao.value}`)
+    }
+</script>

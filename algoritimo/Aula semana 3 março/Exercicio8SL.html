@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel</title>
+</head>
+<body>
+    <h1>Como está meu atendimento</h1>
+    <select id="nota" onchange="myFunction()">
+        <option value="">Escolha o valor</option>
+        <option value="1"></option>
+        <option value="2"></option>
+        <option value="3"></option>
+        <option value="4"></option>
+        <option value="5"></option>
+    </select> <br>
+    Media da avaliaçao <b id="media"></b> <br>
+    Numero de avaliações <b id="qtd_votos"></b>
+</body>
+</html>
+<script>
+    function myFunction(){
+        var calculoEstrela = nota
+        var avals = qtd_votos
+        calculoEstrela
+        media.innerHTML = `${calculoEstrela}`
+    }
+</script>

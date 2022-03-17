@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historia</title>
+</head>
+<body>
+    <select name="hist" id="historiaSL">
+        <option value="Uma vez">Uma vez...</option>
+        <option value="Num belo dia">Num belo dia...</option>
+        <option value="Numa noite chuvosa">Numa noite chuvosa...</option>
+    </select> <br>
+    <select name="continuaçao" id="continuaçao">
+        <option value="um peixe morreu afogado">Um peixe</option>
+        <option value="um gato tomou banho">Um gato</option>
+        <option value="um corvo se curvou">Um corvo</option>
+    </select> <br>
+    <button onclick="FazerHistoria()">Fazer a historia</button>
+</body>
+</html>
+<script>
+    function FazerHistoria(){
+        alert(`${historiaSL.value} ${continuaçao.value}`)
+    }
+</script>

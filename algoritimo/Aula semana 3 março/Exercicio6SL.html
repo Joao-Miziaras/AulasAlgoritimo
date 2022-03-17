@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>img slelect</title>
+</head>
+<body>
+    <select id="estaçao">
+        <option value="<img src='https://static.mundoeducacao.uol.com.br/mundoeducacao/2019/08/primavera.jpg' style='width:200px'>">Primavera</option>
+        <option value="<img src='https://s1.static.brasilescola.uol.com.br/galeria/images/no-outono-as-folhas-com-poucos-nutrientes-os-frutos-madur53bebdedc67a4.jpg' style='width:200px'>">Outono</option>
+        <option value="<img src='https://s1.static.brasilescola.uol.com.br/galeria/images/2d28fe1a3b1ed960bca2e3798803c6b5.jpg' style='width:200px'>">Verão</option>
+        <option value="<img src='http://www.infoescola.com/wp-content/uploads/2008/10/inverno-450x334.jpg' style='width:200px'>">Inverno</option>
+    </select> <br>
+    
+    <button onclick="imagens()">revelar</button> <br>
+    <span id="revelar"></span>
+</body>
+</html>
+<script>
+    function imagens() {
+        var imagem= estaçao.value
+        revelar.innerHTML = `${imagem}`
+    }
+</script>

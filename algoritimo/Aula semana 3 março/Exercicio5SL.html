@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tabuada</title>
+</head>
+<body>
+    <select id="tabuada" onchange="myFunction()">
+        <option value=""></option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+    </select> <br>
+    <span id="revelar"></span>
+</body>
+</html>
+<script>
+    function myFunction(){
+        var numero= tabuada.value
+        revelar.innerHTML = `A tabuada do ${numero} é: <br> 1= ${numero*1} <br> 2 = ${numero*2} <br> 3 = ${numero*3} <br> 4 = ${numero*4} <br> 5 = ${numero*5} <br> 6 = ${numero*6} <br> 7 = ${numero*7} <br> 8 = ${numero*8} <br> 9 = ${numero*9} <br> 10 = ${numero*10}`
+    }
+</script>
