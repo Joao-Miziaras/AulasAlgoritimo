@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pizza</title>
+</head>
+<body>
+    <h3>Pizza sabores</h3>
+    <select id="sabores" autofocus>
+        <option value="23.00">Muçarela</option>
+        <option value="24.00">Calabresa</option>
+        <option value="26.00">Atum</option>
+        <option value="30.00">Portuguesa</option>
+    </select>
+    <h3>Incremento da pizza</h3>
+    <select id="inc1">
+        <option value="2.00">Queijo</option>
+        <option value="2.50">Presunto</option>
+        <option value="3.00">Catupiry</option>
+        <option value="1.50">Ovo</option>
+        <option value="4.00">Palmito</option>
+        <option value="3.50">Frango</option>
+    </select> <br>
+    <select id="inc2">
+        <option value="2.00">Queijo</option>
+        <option value="2.50" selected="selected">Presunto</option>
+        <option value="3.00">Catupiry</option>
+        <option value="1.50">Ovo</option>
+        <option value="4.00">Palmito</option>
+        <option value="3.50">Frango</option>
+    </select> <br>
+    <select id="inc3">
+        <option value="2.00">Queijo</option>
+        <option value="2.50" >Presunto</option>
+        <option value="3.00" selected="selected">Catupiry</option>
+        <option value="1.50">Ovo</option>
+        <option value="4.00">Palmito</option>
+        <option value="3.50">Frango</option>
+    </select> <br> <br>
+    <button onclick="calculo()">Calcular preço da pizza</button> <br> <br>
+    <span id="revelar"></span>
+</body>
+</html>
+<script>
+    
+    function calculo() {
+        var soma = Number(sabores.value) + Number(inc1.value) + Number(inc2.value) + Number(inc3.value)
+        revelar.innerHTML = `A pizza de sabor <b>${sabores.value}</b> acrescida de ${inc1.value}, ${inc2.value} e ${inc3.value} custará um total de <u>R$ ${soma}</u>` 
+    }
+</script>

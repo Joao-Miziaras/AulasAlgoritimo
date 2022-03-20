@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EX8</title>
+</head>
+<body >
+    Qual hobby você quer praticar, selecione as opções  abaixo: <br>
+    <select name="" id="hob" onchange="imagem()">
+<option value="https://cdn.shopify.com/s/files/1/1061/1924/files/Dancer_With_Red_Dress_Emoji_400x400.png">Dançar</option>
+<option value="https://cdn.shopify.com/s/files/1/1061/1924/files/Virus_Emoji_400x400.png">Jogar vídeo game</option>
+<option value="https://cdn.shopify.com/s/files/1/1061/1924/files/Man_Bowing_Emoji_400x400.png">Assistir seriados </option>
+<option value="https://cdn.shopify.com/s/files/1/1061/1924/files/Sign_of_the_Horns_Emoji_400x400.png">Ouvir rock</option>
+
+    </select> <br>
+    
+<img id="img1" src="" alt="" >
+
+
+
+
+
+
+
+</body>
+</html>
+<script>
+var mais = 50
+function imagem() {
+    mais+= 10
+    img1.src= hob.value
+    img1.style.width= mais + 'px'
+    
+    
+    
+}
+
+
+
+
+
+</script>

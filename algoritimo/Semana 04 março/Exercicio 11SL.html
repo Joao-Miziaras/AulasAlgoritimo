@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cofrinho</title>
+</head>
+<body>
+    <select id="cofre" ">
+        <option value="0.5">Adicionar 50 centavos</option>
+        <option value="1.00">Adicionar 1 real</option>
+        <option value="2">Adicionar 2 reais</option>
+        <option value="100">Adicionar 100 reais</option>
+    </select> <br>
+
+    •	O saldo do cofrinho é de: R$<b id="b_saldo">0</b> <br>
+    •	A quantidade de operações foi: <b id="b_qtd">0</b> <br>
+    •	Média dos depósitos: R$ <b id="b_media">0</b> <br>
+
+    <button onclick="adicionar()">depositar</button>
+    <button onclick="gastar()">gastar a grana</button>
+
+</body>
+</html>
+<script>
+    var acumular = 0
+    var aumentar = 0
+    var media = 0        
+    function adicionar() {
+        acumular = acumular+Number(1);
+        b_qtd.innerHTML= acumular;
+        aumentar = aumentar + Number(cofre.value) 
+        b_saldo.innerHTML = aumentar
+        media = ((aumentar + Number(cofre.value))/acumular)
+        b_media.innerHTML = media
+
+    }
+    function gastar() {
+        acumular = 0
+        aumentar = 0
+        media = 0
+        b_qtd.innerHTML= acumular;
+        b_saldo.innerHTML = aumentar
+        b_media.innerHTML = media
+    }
+</script>
