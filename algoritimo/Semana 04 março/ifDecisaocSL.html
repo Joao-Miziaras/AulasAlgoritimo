@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select id="escolha" onchange="decisao()">
+        <option value="1">Feliz</option>
+        <option value="3">Triste</option>
+        <option value="2">normal</option>
+        <option value="4">Estranhp</option>
+    </select>
+</body>
+</html>
+<script>
+    function decisao(){
+        if (escolha.value <=2){
+            alert("Que bom para você")
+        }
+        if (escolha.value >2) {
+            alert("Bora ficar feliz")
+
+        }
+    }
+</script>

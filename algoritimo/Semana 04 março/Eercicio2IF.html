@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>refr</title>
+</head>
+<body> 
+    <input type="text " id="qtd_refri" placeholder="Insira quantas latas de refris por dia"> <br>
+    <button onclick="confirmar()">quantos refris?</button>
+    <div id="d_mostrar"></div>
+</body>
+</html>
+<script>
+    function confirmar(){
+        var resul= qtd_refri.value * 365
+        d_mostrar.innerHTML = `Você consome ${resul} latas por ano <br>`
+       
+        if (resul>500){
+            d_mostrar.innerHTML+=`cuidado com a diabetes`           
+        }
+       
+    }
+</script>
