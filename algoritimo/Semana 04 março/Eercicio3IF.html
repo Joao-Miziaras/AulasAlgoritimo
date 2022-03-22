@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>norma ligma</title>
+</head>
+<body>
+    Insira suas três notas <br>
+    <input id="nt1" placeholder="Insira a primeira nota"> <br>
+    <input id="nt2" placeholder="Insira a segunda nota"> <br>
+    <input id="nt3" placeholder="Insira a terceira nota"> <br>
+    <button onclick="calcular()">Analisar desempenho</button> <br>
+    <div id="revelar"></div>
+
+</body>
+</html>
+<script>
+    function calcular() {
+        var calc_notas = (Number(nt1.value) +Number(nt2.value) + Number(nt3.value))/3
+        revelar.innerHTML = `Sua media foi de ${calc_notas}, onde ${calc_notas} é a media calculada. <br>` 
+        if (calc_notas>9.4) {
+            revelar.innerHTML += `Parabéns, você é fora de serie!`
+        }
+    }
+</script>

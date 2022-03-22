@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>banco</title>
+</head>
+<body>
+    Insira sua renda familiar <br>
+    <input id="renda_familia"> <br>
+    Solicite o valor da prestação <br>
+    <input type="text" id="prestacao"> <br> <br>
+    <button onclick="calc()">Verificar financiamento</button>
+    <div id="revelar"></div>
+</body>
+</html>
+<script>
+    function calc() {
+        var porcen = (prestacao.value/renda_familia.value)*100
+        revelar.innerHTML = `A prestação corresponde a ${porcen}% da renda familiar <br>`
+        if (porcen>30) {
+            revelar.innerHTML += `Será nescessario complementar a renda familiar`
+        }
+
+    }
+</script>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Qual o saldo da sua conta <br>
+    <input type="text" id="saldoConta"> <br>
+    Qual o valor do seu debito <br>
+    <input type="text" id="v_debito"> <br>
+    <button type="submit" onclick="calc()">calcular</button> <br>
+    <div id="revelar"></div>
+</body>
+</html>
+<script>
+    function calc() {
+        var calculo = Number(saldoConta.value) - Number(v_debito.value)
+        revelar.innerHTML = `<b>O saldo da conta atual é ${calculo}</b>`
+        if(calculo<0){
+            revelar.innerHTML =`<b style="color:red">O saldo da conta atual é ${calculo}</b>`
+        } 
+    }
+    
+</script>

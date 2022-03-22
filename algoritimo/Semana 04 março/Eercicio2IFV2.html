@@ -16,10 +16,10 @@
     function confirmar(){
         var nume = qtd_refri.value
         var resul = 0
-        resul = (nume *350)/365
-        if (resul>=500) {
-            d_mostrar.innerHTML=("cuidado com a diabetes")            
+        resul = (nume *350)        
+        d_mostrar.innerHTML = `Você consome ${resul}ML por dia <br>`
+        if (resul>=1400) {
+            d_mostrar.innerHTML+=("Cuidado com a diabetes")            
         }
-        d_mostrar.innerHTML = `Você consome ${resul} por ano`
     }
 </script>
