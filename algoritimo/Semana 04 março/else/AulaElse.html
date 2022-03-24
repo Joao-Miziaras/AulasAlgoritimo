@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ifelse</title>
+</head>
+<body>
+    <input type="text" id="pontosCnh" placeholder="insira os pontos">
+    <button onclick="averiguar()">averigue</button>
+    <div id="escondido"></div>
+    <div id="revelar"></div>
+</body>
+</html>
+<script>
+    function averiguar() {
+        var pontos = pontosCnh
+        var vMulta1 = pontosCnh.value * 78
+        var vMulta2 = pontosCnh.value * 87
+        if (pontos>=20) {
+           
+            revelar.innerHTML += `O valor total da multa é ${vMulta2}`;  
+            escondido.innerHTML = `Sua CNH está suspensa `  
+        }
+        else{
+            revelar.innerHTML = `O valor da total da multa é ${vMulta1}`
+
+        }
+    }
+</script>

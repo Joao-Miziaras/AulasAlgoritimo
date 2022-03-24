@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>idade</title>
+</head>
+<body>
+    insira nome
+    <input type="text" id="nome"> <br>
+    insira idade
+    <input type="text" id="idade"> <br>
+    <button onclick="ver()">ver</button>
+
+</body>
+</html>
+<script>
+    function ver() {
+        var nomeV = nome.value
+        var idadeV = idade.value
+        if (idadeV>=18) {
+            alert(nomeV + " vamos tirar a CNH?")
+        } else {
+            alert(nomeV + " vai jogar playstation!!")
+        }
+    }
+
+</script>

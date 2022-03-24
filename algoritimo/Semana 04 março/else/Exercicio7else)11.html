@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>saldo</title>
+</head>
+<body>
+    Qual é o saldo da sua conta bancaria<br>
+    <input type="text" id="dinheiro"> <br>
+    <button onclick="calc()">Verificar finanças</button>
+    <div id="revelar"></div>
+</body>
+</html>
+<script>
+    function calc(){
+        var saldo = dinheiro.value
+        if (saldo == 0) {
+            revelar.innerHTML = `<h1>Conta zerada</H1>`;
+        }
+        else{
+             if (saldo < 0) {
+                revelar.innerHTML = `<h1 style="color:red">Está devendo!!!</H1>`
+            }
+            else {
+                revelar.innerHTML = `<h1 style="color: blue">saldo Positivo </H1>`
+            }
+        }
+            
+           
+        
+        
+    }
+</script>

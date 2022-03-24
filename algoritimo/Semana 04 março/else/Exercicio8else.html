@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elevador</title>
+</head>
+<body>
+    Insira a quantidade de homens no elevador
+    <input type="text" id="qtdHomem"> <br>
+    Insira a quantidade de homens no elevador
+    <input type="text" id="qtdMulher"> <br>
+    <button onclick="testar()">Ver condição do elevador</button>
+    <div id="revelar" ></div>
+</body>
+</html>
+<Script>
+    function testar() {
+        var pesoTotal = (qtdHomem.value*90) + (qtdMulher.value*70)
+        var pesoMinimo = pesoTotal - 499
+        if (pesoTotal>=500) {
+            revelar.innerHTML =`<span style="color:green">Alguém precisa descer. Precisa perder ${pesoMinimo} kg para mover o elevador</span>`   
+        } else {
+            revelar.innerHTML = `<span style="color:red">Elevador vai se mover, pois está com ${pesoTotal} kg</span>`
+        }
+    }
+</Script>
