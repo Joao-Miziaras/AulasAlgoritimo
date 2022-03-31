@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Qual a temperatura atual
+    <input type="text" id="temperatura"> <br>
+    <button onclick="enviar()">Ver situação</button> 
+
+</body>
+</html>
+<script>
+    function enviar(){
+        var temp = temperatura.value
+        if(temp>=21 && temp<=24){
+            alert("Temperatura confotavel:)")
+        } else {
+            alert(`temperatura desconfortavel :(`)
+        }
+    }
+</script>

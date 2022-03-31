@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Digite quantos jogos você participou
+    <input type="text" id="jogos"> <br>
+    Digite quantos gols marcou 
+    <input type="text" id="gols"> <br>
+    <button onclick="enviar()">Enviar</button> <br>
+    <div id="mostrar"></div>
+</body>
+</html>
+<script>
+
+    function enviar() {
+        var resul = gols.value / jogos.value  
+        if(resul>0.6){
+            mostrar.innerHTML = `Você é um atacante exepicional pois sua media é ${resul}`
+        }
+        else if(resul<0.2) {
+            mostrar.innerHTML = `Mude de possição pois sua media é ${resul}`
+        }
+        else {
+            mostrar.innerHTML = `jogador mediano pois sua media é ${resul}`
+        }
+    }
+</script>

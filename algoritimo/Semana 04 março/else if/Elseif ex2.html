@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    digite o numero da sua renda
+    <input type="text" id="rend">
+    <button onclick="enviar()">enviar</button>
+    <div id="revelar"></div>
+</body>
+</html>
+<script>
+    function enviar(){
+        var Renda = rend.value 
+        if (Renda>9500){
+            revelar.innerHTML = `Classe A+`
+        } else if (Renda>2500) {
+            revelar.innerHTML= `classe B`
+        } else if (Renda>900) {
+            revelar.innerHTML= `classe C`
+        } else if (Renda>250){
+            revelar.innerHTML= `classe D`
+        } else {
+            revelar.innerHTML= `classe E`
+
+        }
+    }
+</script>

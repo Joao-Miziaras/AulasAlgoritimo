@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>covid</title>
+</head>
+<body>
+    Quantos pães você come por dia
+    <input type="text" id="paes"> <br>
+    Quantos pacotes de bolachas você come por dia
+    <input type="text" id="bolacha"> <br>
+    Quantos copos de achocolatados você toma por dia
+    <input type="text" id="copos"> <br>
+    <button onclick="enviar()">Verificar calorias</button>
+    <div id="revelar"></div>
+</body>
+</html>
+<script>
+    function enviar(){
+        var paoC = paes.value * 50
+        var bolaC = bolacha.value * 80
+        var achoC = copos.value * 70
+        var resultado = Number(paoC) + Number(bolaC) + Number(achoC)
+        if (resultado>400){
+            revelar.innerHTML = `Bom, acho que muitos não vão te reconhecer após a quarentena`
+        } else if(resultado>=200){
+            revelar.innerHTML = `Cuidado vai ficar mais fofinho apos quarentena`
+        } else {
+            revelar.innerHTML = `Parabéns, vai sair em forma`
+        }
+    }
+</script>
