@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+</head>
+<body>
+    Insira sua nome
+    <input type="text" id="email"> <br>
+    Insira sua senha
+    <input type="password" id="senha"> <br>
+    Insira sua codigo de segurança
+    <input type="password" id="codigoSegurança"> <br>
+    <button onclick="logar()">Logar</button>
+    <div id="revelar"></div>
+
+</body>
+</html>
+<script>
+    function logar() {
+        var ema = email.value
+        var sen = senha.value
+        var cdd = codigoSegurança.value
+        if (ema == 'sptech' && sen=='123') {
+            alert('usuario autenticado com sucesso')          
+        } else {
+            alert('Falha na autenticação')
+        }
+    }
+</script>

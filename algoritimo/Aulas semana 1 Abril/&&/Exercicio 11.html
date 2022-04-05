@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IDD salario</title>
+</head>
+<body>
+    Insira sua salario
+    <input type="text" id="salario"> <br>
+    Insira sua idade
+    <input type="text" id="idade"> <br>
+    <button onclick="avaliar()">Avaliar situação</button>
+    <div id="revelar"></div>
+
+</body>
+</html>
+<script>
+    function avaliar() {
+        var sal = salario.value
+        var idd = idade.value
+        if (idd<18 && sal <2500) {
+            revelar.innerHTML = `menor de idade liso`
+        }else if(idd<18 && sal >=2500){
+            revelar.innerHTML = `menor de idade e ostentação`
+        }else if(idd>=18 && sal <3500){
+            revelar.innerHTML = `maior de idade liso`
+        }else if(idd>=18 && sal >=3500 && sal<7000){
+            revelar.innerHTML = `maior de idade e ostentaçao`
+        }else{
+            revelar.innerHTML = `maior de idade e mega ostentação`
+        }
+    }
+</script>
