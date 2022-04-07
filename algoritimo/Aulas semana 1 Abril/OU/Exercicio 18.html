@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="" id="nota" placeholder="nota">
+    <input type="text" name="" id="frequencia" placeholder="frequencia">
+    <button onclick="analise()">Analisar aluno</button>
+    <div id="revelar"></div>
+    <div id="revelarf"></div>
+</body>
+</html>
+<script>
+    function analise() {
+        var nt = nota.value
+        var freq = frequencia.value
+        if(nt <0 || nt>10){
+            alert('onde já se viu nota <0 e >10')
+            revelar.innerHTML = ``
+            revelarf.innerHTML = ``
+        } else if(nt>=0 && nt <6){
+            revelar.innerHTML = `Aluno ficou abaixo da media`
+        }else if(nt >=6 && nt<=8){
+            revelar.innerHTML = `Aluno ficou na média`
+        }else if(nt>8 && nt<=10){
+            revelar.innerHTML = `Aluno acima da média`
+        }
+        if(freq>=75 && freq<=100){
+            revelarf.innerHTML = `Aprovado por frequencia `
+        } else if(freq<75 || freq>100){
+            revelarf.innerHTML = `reprovado por frequencia`
+        } else if(freq<0 ||freq>100){
+            alert('onde já se viu frequencia <0 e >100')
+            revelar.innerHTML = ``
+            revelarf.innerHTML = ``
+        }
+    }
+</script>

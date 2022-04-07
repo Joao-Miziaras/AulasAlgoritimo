@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select name="" id="alimento">
+        <option value="1">carne bovina</option>
+        <option value="2">soja</option>
+        <option value="3">carne suina</option>
+        <option value="4">legumes</option>
+        <option value="5">Carne de peixe</option>
+        <option value="6">frutas</option>
+        <option value="7">ovos</option>
+    </select>
+    <button onclick="comer()">Tipo de alimentaçao</button>
+    <div id="revelar"></div>
+</body>
+</html>
+<script>
+    function comer() {
+        var ali = alimento.value
+        if (ali == 1 || ali==3 || ali ==5 ) {
+            revelar.innerHTML =`voce não pode ser vegano <br>`
+        } else if (ali ==2 || ali ==4|| ali==6) {
+            revelar.innerHTML ='Você pode ser vegano <br> Você pode ser Vegetariano'
+        } else if(ali ==2 || ali ==4 || ali ==6) {
+            revelar.innerHTML = 'você pode ser vegetariano<br> '
+        }else {
+            revelar.innerHTML='Você não pode ser vegano <br> Você pode ser Vegetariano'
+        }
+    }
+</script>

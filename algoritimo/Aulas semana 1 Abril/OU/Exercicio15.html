@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+</head>
+<body>
+    <input type="text" id="login" placeholder="login">
+    <input type="text" id="senha" placeholder="senha">
+    <input type="text" id="informaçaoPessoal" placeholder="informação pessoal">
+    <button onclick="autenticar()">Autenticar</button>
+    <div id="revelar"></div>
+</body>
+</html>
+<script>
+    function autenticar() {
+        var log = login.value
+        var sen = senha.value
+        var inf =  informaçaoPessoal.value
+        if(log == 'ana' && sen=='braga' && inf ==1960 || inf=='louro josé'){
+            revelar.innerHTML = `usuario autenticado`
+        } else {
+            revelar.innerHTML =`Falha na autenticação`
+        }
+    }
+</script>

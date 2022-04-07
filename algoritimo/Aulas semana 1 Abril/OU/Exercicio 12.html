@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    nota atendimento
+    <input type="text" name="" id="nota">
+    <button onclick="aval()">Avaliar atendimento</button>
+    <div id="revelar"></div>
+</body>
+</html>
+<script>
+    function aval() {
+        var nt = nota.value
+        if (nt <0 || nt>10) {
+            revelar.innerHTML = `Nota invalida`
+        } else if(nt >0 && nt<5){
+            revelar.innerHTML = `Não aprovada`
+        } else if(nt == 5 || nt == 6){
+            revelar.innerHTML = `Neutro`
+        } else if(nt>6){
+            revelar.innerHTML = `Aprovado`
+        }
+    }
+</script>

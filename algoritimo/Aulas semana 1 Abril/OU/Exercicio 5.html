@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Qual a temperatura do ambiente
+    <input type="text" name="" id="temperatura">
+    <button onclick="analise()">analisar clima</button>
+
+</body>
+</html>
+<script>
+    function analise() {
+        var temp = temperatura.value
+        if(temp ==21 || temp ==24){
+            alert('temperatura confortavel')
+        } else if(temp<21){
+            alert(`vão ter hipotermia`)
+        } else if(temp>24){
+            alert('as pessoas vão derreter')
+        }
+    }
+</script>

@@ -19,13 +19,15 @@ function avaliar(){
     var pass = passagens.value
     var calc = pass * 4.40
     var desc3 = calc * 0.03
+    var desc5 = calc * 0.05
+    var desc7 = calc * 0.07 
     if (pass>=8 && pass<=50) {
         if (pass>=8 && pass<=19) {
-            revelar.innerHTML= 'Seu desconto é' + (calc-desc3)
+            revelar.innerHTML= 'Seu desconto é' + (calc-desc3) + 'R$ recebendo' + desc3 +' de desconto'
         } else if (pass>19 && pass<=49){
-            revelar.innerHTML='seu desconto é de '+ (calc*0.05)
+            revelar.innerHTML='seu desconto é de '+ (calc-desc5)+ 'R$ recebendo' + desc5 +' de desconto'
         }else if (pass==50){
-            revelar.innerHTML= 'seu desconto é de '+ (calc*0.07)
+            revelar.innerHTML= 'seu desconto é de '+ (calc-desc7) + 'R$ recebendo' + desc7 +' de desconto'
         }
     } else {
         revelar.innerHTML="Quantidade invalida"

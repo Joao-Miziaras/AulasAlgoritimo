@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Forma de pagamento
+    <select name="" id="pagamento">
+        <option value="1">Dinheiro</option>
+        <option value="2">Cartão de débito</option>
+        <option value="3">Cartão de Crédito</option>
+        <option value="4">Boleto</option>
+    </select>
+    <button type="submit" onclick="enviar()">Analisar compras</button>
+    <div id="revelar"></div>
+</body>
+</html>
+<script>
+    function enviar() {
+        var pag = pagamento.value
+        if (pag == 1 || pag == 2) {
+            revelar.innerHTML = `você terá que pagar a vista`
+        } else{
+            revelar.innerHTML =`voce poderá pagar parcelado`
+        }
+    }
+</script>

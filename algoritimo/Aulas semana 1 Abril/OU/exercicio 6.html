@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Você ja clicou <span id="contagem">0</span> vezes</h2>
+    <button onclick="calculo()">Clique cabalístico</button>
+</body>
+</html>
+<script>
+    var contg = 0
+    function calculo() {
+        contg= contg+1
+        contagem.innerHTML= contg
+        if (contg==3|| contg==4 || contg==7 || contg==10) {
+            alert('Você clicou ' + contg + ' vezes e Juliana gosta desse número!')
+        } 
+    }
+</script>
