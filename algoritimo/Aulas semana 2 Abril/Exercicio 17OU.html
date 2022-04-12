@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>comida</title>
+</head>
+<body>
+    <select name="" id="arroz">
+        <option value="0">Escolha um arroz</option>
+        <option value="1">Arroz branco</option>
+        <option value="2">Arroz integral</option>
+    </select>
+    <input type="text" name="" id="cozimento" placeholder="Tempo de cozimento">
+    <input type="text" id="sal" placeholder="A quantidade de sal">
+    <button onclick="avaliar()">Avaliar arroz</button>
+    <div id="revelar"></div>
+</body>
+</html>
+<script>
+    function avaliar(){
+        var tipo = arroz.value;
+        var cozi = cozimento.value
+        var sa = sal.value
+        if (tipo == 1 && cozi == 10 && sa <= 9 || sa == 10) {
+            revelar.innerHTML = `Arroz perfeito`
+        } else if(tipo==2 && cozi == 20 && sa <=14 || sa == 15) {
+            revelar.innerHTML =`Arroz perfeito`
+        }else if(tipo == 0){
+            revelar.innerHTML=``
+            alert("Escolha uma opção de arroz")
+        }else{
+            revelar.innerHTML = "arroz não está perfeito" 
+        }
+    }
+</script>

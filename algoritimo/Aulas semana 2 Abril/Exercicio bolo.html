@@ -1,0 +1,57 @@
+<!-- 
+        Receber a idade da pessoa e informar os estágios pelo qual essa pessoa já passou da seguinte forma:
+            Já passou pela infância: true/false
+            Já passou pela adolescência: true/false
+            Já é um idoso: true/false
+                TOTAL DE PONTOS: 99
+        Sendo que a infância é até os 12 anos, adolescência até os 18 anos, e o idoso é a partir dos 65 anos. 
+        Se já passou pela infância ganha 10 pontos, se já passou pela adolescência ganha 20 pontos 
+            e se é um idoso ganha 50 pontos     
+    -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>idd</title>
+</head>
+<body>
+    <input type="text" name="" id="idade">
+    <button onclick="testar()">ver</button>
+    <div>
+        Já passou pela infancia:<span id="infancia"></span> <br>
+        Já passou pela adolescencia:<span id="adolescencia"></span> <br>
+        Já é idoso:<span id="idoso"></span> <br>
+        Total pontos : <span id="verdade"></span>
+    </div>
+</body>
+</html>
+<script>
+    function testar() {
+        var iddInfancia = idade.value >0
+        var iddAdole = idade.value >=19
+        var iddVelho = idade.value>=65
+        var iddTotal = 80
+
+        if(iddInfancia == true && iddAdole == true && iddVelho==true){
+            infancia.innerHTML = `${iddInfancia}`
+            adolescencia.innerHTML = `${iddAdole}`
+            idoso.innerHTML = `${iddVelho}`           
+            verdade.innerHTML = iddTotal
+        } else if(iddInfancia == true && iddAdole == false && iddVelho==false){
+            infancia.innerHTML = `${iddInfancia}`
+            adolescencia.innerHTML = `${iddAdole}`
+            idoso.innerHTML = `${iddVelho}`
+            iddTotal = iddTotal - 70
+            verdade.innerHTML = iddTotal
+
+          } else if(iddInfancia == true && iddAdole == true && iddVelho == false){
+            infancia.innerHTML = `${iddInfancia}`
+            adolescencia.innerHTML = `${iddAdole}`
+            idoso.innerHTML = `${iddVelho}`        
+            iddTotal = iddTotal - 30
+            verdade.innerHTML = iddTotal
+          }
+    } 
+</script>

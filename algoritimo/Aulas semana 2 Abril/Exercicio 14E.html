@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="começo" style="display: block;">
+        Piloto
+        <input type="text" id="alturaInicial" placeholder="Altura incial para seleção">
+        <input type="text" id="alturaFinal" placeholder="Altura final para seleção"> <br> <br>
+        Basquete 
+        <input type="text" name="" id="alturaInicialBasq" placeholder="Altura inicial para seleção">
+        <input type="text" name="" id="alturaFinalBasq" placeholder="Altura final para seleção"> <br> <br>
+        <button onclick="selecionar()">selecionar</button>
+    </div>
+    <div id="altas" style="display: none;">
+        <h1>Processo de seleção de atletas</h1>
+        <h3>Criterio de seleção de piloto - altura <span id="iniEfin"></span> </h3>
+        <h3>Criterio de seleção de piloto - altura <span id="iniEfinBasq"></span> </h3>
+        <h1>Cadastro</h1>
+        <input type="text" name="" id="nome" placeholder="Nome"> <br>
+        <input type="text" id="alturaSua" placeholder="Sua altura"> <br>
+        <select name="" id="modalidade">
+            <option value="0">Escolha uma modalidade</option>
+            <option value="1">Piloto</option>
+            <option value="2">Basquete</option>
+        </select> <br>
+        <button onclick="enviara()">enviar informaçoes</button>
+    </div>
+    <div id="revelar"></div>
+    
+</body>
+</html>
+<script>
+    var altIP = 0
+    var altFP = 0
+    var altIB = 0
+    var altFB = 0
+    function selecionar(){
+         altIP = alturaInicial.value
+        altFP = alturaFinal.value
+        altIB = alturaInicialBasq.value
+        altFB = alturaFinalBasq.value
+        if(altIP<1 && altFP<altIP || altIB<=1.5 && altFB <altIB || altIP =='' && altFP == ''|| altFB =='' && altIB ==''){
+            alert("Erro")
+        } else{
+            começo.style.display = "none"
+            altas.style.display = "block"
+            iniEfin.innerHTML = `${altIP}metros até ${altFP}metros`
+            iniEfinBasq.innerHTML = `${altIB}metros até ${altFB}metros`
+        }
+        
+    }
+    function enviara() {
+        var no = nome.value
+        var altS = alturaSua.value
+        var mod = modalidade.value
+        altIP = alturaInicial.value
+        altFP = alturaFinal.value
+        altIB = alturaInicialBasq.value
+        altFB = alturaFinalBasq.value        
+
+        if (mod == 1 && altS <= altFP && altS >= altIP) {
+            revelar.innerHTML = `O candidato ${no} com altura ${altS} participará do processo de seleção de piloto`
+        } else if (mod == 2 && altS <= altFB && altS >= altIB){
+            revelar.innerHTML = `O candidato ${no} com altura ${altS} participará do processo de seleção de jogador de basquete`
+        }else {
+            revelar.innerHTML = `O candidato ${no} com altura ${altS} não atende os requisitos`
+        }
+    } 
+</script>
