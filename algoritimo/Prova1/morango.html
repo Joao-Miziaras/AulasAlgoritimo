@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+
+<html lang="pt">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Morango</title>
+
+</head>
+
+<body>
+
+    <div id="div_abrir_vendas">
+
+        <h2>------Iniciar as vendas do dia---------</h2>
+
+        Informe a quantidade de caixas colhidas:
+
+        <input id="ipt_qtde_colhida"> <br><br><br>
+
+        <button onclick="abrir()">Abrir as Vendas</button>
+
+    </div>
+
+    <div id="div_registrar_vendas" style="display: none;">
+
+        <h2>------- Registrar Vendas -------</h2>
+
+        Quantidade vendida: <input id="ipt_qtde_vendida">
+
+        Valor de venda: <input id="ipt_val_venda">
+
+        <span id="span_msg_valor"></span> <br><br>
+
+        <button onclick="registrar()">Registrar a Venda</button>
+
+        <button onclick="encerrar()" style="background-color: red;">Encerrar as Vendas</button>
+
+        <div id="div_msg_vendas"></div>
+
+    </div>   
+
+</body>
+
+</html>
+
+<script>
+    var qtd_caixaCo = 0
+    function abrir() {
+        qtd_caixaCo = ipt_qtde_colhida.value
+        if(qtd_caixaCo>2000){
+            alert(`Tudo isso!!! Verificar se a quantidade está correta`)
+        } else if(qtd_caixaCo>=100 && qtd_caixaCo <=2000){
+            div_abrir_vendas.style.display = "none"
+            div_registrar_vendas.style.display = "block"
+        } else{
+            alert(`ERRO - Com esse volume de Morangos não dá para abrir as vendas`)
+        }
+        
+    }
+    var morangoVeVar = 0
+    var valorVendaVar = 0
+    var calculo = 0
+    var total = 0
+    var media = 0
+    function registrar() {
+        morangoVeVar = ipt_qtde_vendida.value
+         valorVendaVar = ipt_val_venda.value
+        calculo = (qtd_caixaCo - morangoVeVar)
+         total = calculo * valorVendaVar
+        media = total/2
+        if(morangoVeVar < 20 && valorVendaVar>5 || valorVendaVar ==6){
+            span_msg_valor.innerHTML = `Valor OK`
+            div_msg_vendas.innerHTML = `com a venda de ${morangoVeVar} de caixas de morango o saldo restante é de ${calculo} `
+        } else if(morangoVeVar >= 20 || morangoVeVar<40 && valorVendaVar>=4.5 || valorVendaVar ==5.5 ){
+            div_msg_vendas.innerHTML = `com a venda de ${morangoVeVar} de caixas de morango o saldo restante é de ${calculo} `
+            span_msg_valor.innerHTML = `Valor OK`
+        } else if(morangoVeVar > 40 && valorVendaVar>=4 || valorVendaVar==5 ){
+            span_msg_valor.innerHTML = `Valor OK`
+            div_msg_vendas.innerHTML = `com a venda de ${morangoVeVar} de caixas de morango o saldo restante é de ${calculo} `
+        } else{
+            span_msg_valor.innerHTML = `Valor errado para essa quantia de morangos`
+            }
+        
+        }
+        function encerrar() {
+            morangoVeVar = ipt_qtde_vendida.value
+         valorVendaVar = ipt_val_venda.value
+        calculo = (qtd_caixaCo - morangoVeVar)
+         total = calculo * valorVendaVar
+        media = (Number(valorVendaVar) + Number(morangoVeVar))/ 2
+            div_msg_vendas.innerHTML = `saldo do produto = ${calculo} <br>
+                                        volume total vendido = ${morangoVeVar} <br>
+                                        valor total das vendas = ${total} <br>
+                                        valor médio das vendas = ${media}  <br> <br> <br> `
+            if (media>=5 || morangoVeVar >100 && saldo<100) {
+                div_msg_vendas.innerHTML += `O turno de hoje foi bom`
+            } else{
+                div_msg_vendas.innerHTML += `O turno de hoje foi normal`
+            }
+        }
+</script>
