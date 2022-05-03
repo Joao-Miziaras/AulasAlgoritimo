@@ -1,0 +1,27 @@
+O Benedito é uma pessoa que gosta muito de números, ele gostaria que você fizesse um programa para mostrar os números que são divisíveis pelos principais números primos, sendo que:
+
+1.       Receba o intervalo de números que ele quer analisar
+
+2.       O clicar no botão analisar validar se o intervalo é válido, caso contrário emitir mensagem explicativa de erro e não seguir em frente. O intervalo válido é: o primeiro número tem que ser maior que zero e o segundo número tem que ser maior que o primeiro.
+
+3.       Analisar cada um dos números contidos no intervalo informado no item 2. da seguinte forma:
+
+           a.       Se o número for par, emitir na página: “O número XX é par”.
+
+           b.       Se o número for divisível por 3, emitir na página: “O número XX é divisível por 3”.
+
+           c.       Se o número for divisível por 5, emitir na página: “O número XX é divisível por 5”.
+
+           d.       Se o número for divisível por 7, emitir na página: “O número XX é divisível por 7”.
+
+           e.       Se o número for divisível por 11, emitir na página: “O número XX é divisível por 11”.
+
+           f.        Se o número for divisível por 13, emitir na página: “O número XX é divisível por 13”.
+
+           g.       Se o número não for divisível por nenhum dos números acima, emitir na página: “O número XX não é divisível pelos principais números primos”
+
+           OBSERVAÇÃO: Para número analisado, todas as mensagens devem ser emitidas na mesma linha, mas para cada número analisado deve ser emitida uma e somente uma linha na página.
+
+4.       Ao final da análise de todos os números do intervalo emitir a mensagem abaixo sem apagar as demais:
+
+           a.       O intervalo de YY a ZZ tem NN números, sendo que AA números são divisíveis por algum número primo.

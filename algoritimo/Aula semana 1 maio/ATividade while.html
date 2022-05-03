@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Digite o intervalo de numeros que deseja analisar <br>
+    <input type="text" name="" id="numero1" placeholder="Numero um do intervalo"> <br>
+    <input type="text" name="" id="numero2" placeholder="Numero dois do intervalo"> <br>
+    <button onclick="analise()">analisar</button>
+    <span id="revelar"></span>
+</body>
+</html>
+<script>
+    var contador = 0
+    function analise(){
+        var num1 = numero1.value;
+        var num2 = numero2.value;
+        if (num1<0 || num1>num2) {
+            alert('A sequencia não pode ser negativa e o segundo numero da sequencia não pode ser menor que o primeiro')
+        } else{
+            while(num1<=num2){
+                if(num1%2 == 0 || num1%3==0 || num1%5==0 || num1%7==0 || um1%11==0 || num1%13==0){
+                    contador ++;
+                
+                }if(num1%2 == 0){
+                    revelar.innerHTML += `<br>O numero ${num1} é divisivel por 2 <Br>`
+                    contador ++
+                }if(num1%3==0){
+                    revelar.innerHTML += `<br>O numero ${num1} é divisivel por 3 <Br>`
+                    contador++
+                }if(num1%5==0){
+                    revelar.innerHTML += `<br>O numero ${num1} é divisivel por 5 <Br>`
+                    contador++
+                }if(num1%7==0){
+                    revelar.innerHTML += `<br>O numero ${num1} é divisivel por 7 <Br>`
+                    contador ++
+                }if(num1%11==0){
+                    revelar.innerHTML += `<br>O numero ${num1} é divisivel por 11 <Br>`
+                        contador++
+                }if(num1%13==0){
+                    revelar.innerHTML += `<br>O numero ${num1} é divisivel por 13 <Br>`
+                    contador++
+                }else{
+                    revelar.innerHTML += `<br>O numero ${num1} não é divisivel pelos principais numeros primos<br>`
+                }
+                num1++;
+                
+            }revelar.innerHTML += `<br>O intervalo de ${numero1.value} a ${num2} tem ${num2-numero1.value + 1} sendo que ${contador} são numeros primos<br>`
+        }
+    }
+</script>
