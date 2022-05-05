@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>banco</title>
+</head>
+<body>
+    <input type="text" name="" id="numeroV" placeholder="numero depositos">
+    <input type="text" name="" id="valor" placeholder="valor depositos">
+    <button onclick="acom()">Acompanhar grana</button> <br>
+    <span id="revelar"></span>
+</body>
+</html>
+<script>
+    function acom(){
+        var num = numeroV.value;
+        var va = valor.value;
+        for(cont = 1;cont<=num; cont ++){
+            revelar.innerHTML += `${cont}º Mês com o valor de ${Number(va)*cont}  `
+            revelar.innerHTML += `<br>`
+        }
+    }
+</script>

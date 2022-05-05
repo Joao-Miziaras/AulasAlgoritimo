@@ -1,0 +1,23 @@
+Crie um programa o qual:
+a)Tenha um botão "Diga algo sobre a quarentena"
+b)Ao clicar nele, mostre na própria página 7 vezes uma frase a sua escolha
+
+
+Refaça o programa anterior de tal forma que, antes de cada frase apareça um contador. Ex: Se a frase digitada foi “Boa Tarde” a página ficará assim:
+1. Boa tarde
+2. Boa tarde
+...
+7. Boa tarde
+
+Crie um programa o qual:
+a) Ao clicar num botão "Números cabalísticos"...
+c) Exiba, debaixo do botão, os números de 1 a 15, um embaixo do outro, PORÉM, não devem aparecer os números cabalísticos 3, 4, 7, 10 e 12.
+
+
+Crie um programa o qual:
+a) Pergunte o nome da pessoa que o usuário mais ama na vida
+b) Pergunte o quanto o usuário a ama (um número inteiro)
+c) Ao clicar num botão "Expressar amor", devem aparacer, abaixo dele, N vezes (conforme o valor em b)) a frase indicada em a), como neste exemplo (considerando o nome "Lady Gaga" e que ama "3")
+ 1 - Lady Gaga, eu te amo! Sempre lembre disso!
+ 2 - Lady Gaga, eu te amo! Sempre lembre disso!
+ 3 - Lady Gaga, eu te amo! Sempre lembre disso!

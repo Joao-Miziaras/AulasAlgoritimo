@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="" id="quantidadeEle" placeholder="Quantidade elefante"> <br>
+    <button onclick="atazanar()">Atazanar a médium</button> <br>
+    <span id="revelar"></span> 
+</body>
+</html>
+<script>
+    function atazanar() {
+        var ele = quantidadeEle.value;
+        var repete = 0
+        for(var cont = 2;cont<=ele;cont ++){
+            repete += 'incomodam'
+            revelar.innerHTML += `1 elefante incomoda muita gente  `        
+            revelar.innerHTML += `${cont} elefante ${repete} muito mais  `      
+            revelar.innerHTML += '<BR>'
+        }
+        
+    }
+</script>
