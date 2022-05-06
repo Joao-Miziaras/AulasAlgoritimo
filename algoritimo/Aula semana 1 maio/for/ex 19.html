@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="" id="idadeUsuario" onkeyup="mudar()">
+    <span id="revelar"></span>
+</body>
+</html>
+<script>
+    function mudar(){
+        var cont= idadeUsuario.value
+        for(idd=0;idd<=cont;idd++){
+            if(idd<=4 && idd>=0){
+                revelar.innerHTML +=`${idd}anos(primeira infancia)` 
+            }else if(idd<=6 &&idd>4){
+                revelar.innerHTML +=`${idd}anos(Pré-escolar)`
+            }else if(idd<=10 && idd>6){
+                revelar.innerHTML +=`${idd}anos(segunda infancia)`
+            }else if(idd<=18 && idd>10){
+                revelar.innerHTML +=`${idd}anos(Adolescencia)`
+            }else if(idd<=50 && idd>18){
+                revelar.innerHTML +=`${idd}anos(adulto)`
+            }else if(idd<=100 && idd>50){
+                revelar.innerHTML +=`${idd}anos(melhor idade)`
+            }else{
+                revelar.innerHTML +=`${idd}anos(Matusalém)`
+            }
+            revelar.innerHTML +="<br>"
+        }
+    }
+</script>

@@ -16,9 +16,18 @@
 <script>
     function acom(){
         var num = numeroV.value;
-        var va = valor.value;
+        var va=valor.value;
+        var porcentagem =va*1/100
         for(cont = 1;cont<=num; cont ++){
-            revelar.innerHTML += `${cont}º Mês com o valor de ${Number(va)*cont}  `
+            if (cont%3 ==0) {
+                revelar.innerHTML += `${cont}º Mês com o valor de 
+                ${porcentagem*cont}` 
+
+            }else{
+                revelar.innerHTML += `${cont}º Mês com o valor de 
+                    ${Number(va)*cont}` 
+
+            } 
             revelar.innerHTML += `<br>`
         }
     }
