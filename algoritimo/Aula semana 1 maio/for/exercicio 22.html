@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>amostragens</title>
+</head>
+<body>
+    Digite o valor inferior da amostragen
+    <input type="text" name="" id="valorInferior"> <br>
+    Digite o valor inferior da amostragen
+    <input type="text" name="" id="valorSuperior"> <br>
+    digite a divisibilidade que deseja
+    <input type="text" name="" id="divisibilidade"> <br>
+    <button onclick="valores()">Contar</button> <br>
+    <span id="revelar"></span>
+
+</body>
+</html>
+<script>
+    var numerosTotal = 0
+    var somaNum =0 
+    function valores() {
+        var vi = valorInferior.value;
+        var vs = valorSuperior.value;
+        var divi = divisibilidade.value;
+        if(vi<=2 || vi ==''){
+            alert('A amostragem inferior deve ser maior que 1')
+        }if(vs>=99 || vs==''){
+            alert('A amostragem superior deve ser menor que 100')
+        }if(divi<=3 && divi >=10|| divi ==''){
+            alert('A divisibilidade deve estar entre 3 e 10')
+        }else{
+            for(cont = vi; cont<=vs; cont ++){
+                if(cont%divi == 0){
+                    revelar.innerHTML += `${cont} <br>`
+                    numerosTotal ++
+                    somaNum 
+                }
+            }
+            revelar.innerHTML += `QUANTIDADE TOTAL DE NÚMEROS EXIBIDOS: ${numerosTotal} <br>
+                                 SOMATÓRIO DOS NÚMEROS EXIBIDOS: ${somaNum} <br>
+                                 MÉDIA DOS NÚMEROS EXIBIDOS: 99,99 <br>
+                                 MAIOR NÚMERO EXIBIDO: 99 <br>
+                                 MENOR NÚMERO EXIBIDO: 99 <br>`
+        }
+
+    }
+</script>
+<!--
+    vars 
+    3 captar inputs (^)
+    1 total de numeros
+    1 pegar os numeros exibidos(<>)
+    1 somar numeros 
+    1 media 
+    1 maior
+    1 menor
+
+
+
+    validação: <1; >100; >=3 <=10
+-->

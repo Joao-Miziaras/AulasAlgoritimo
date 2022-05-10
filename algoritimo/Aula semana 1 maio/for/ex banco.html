@@ -14,14 +14,16 @@
 </body>
 </html>
 <script>
+    var total = 0
     function acom(){
         var num = numeroV.value;
-        var va=valor.value;
-        var porcentagem =va*1/100
-        for(cont = 1;cont<=num; cont ++){
+        for(cont = 1;cont<=num; cont ++){    
+            var va=valor.value;
+            var porcentagem =va*1/100
+            total=va
             if (cont%3 ==0) {
                 revelar.innerHTML += `${cont}º Mês com o valor de 
-                ${porcentagem*cont}` 
+                ${(total*cont*1/100)+Number(total)*cont}` 
 
             }else{
                 revelar.innerHTML += `${cont}º Mês com o valor de 
