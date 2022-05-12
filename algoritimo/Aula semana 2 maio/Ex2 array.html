@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>viagens</title>
+</head>
+<body>
+    Insira o destino da viagem
+    <input type="text" name="" id="destinoViagem"> <br>
+     <button onclick="cadastrar()">cadastrar Viagem</button> <br>
+     <div id="botoes" style="display: none;">
+         <button onclick="primeiraV()">Primeira viagem</button> <br>
+         <button onclick="terceiraV()">terceira viagem</button> <br>
+         <button onclick="ultimaV()">ultima viagem</button> <br>
+     </div>
+     <span id="revelar"></span>
+</body>
+</html>
+<script>        
+    var cadVi = []
+    var cont = 1
+    function cadastrar() {
+        var destVi = destinoViagem.value;
+        cadVi.push(destinoViagem.value)
+        botoes.style.display='block'
+        destinoViagem.value = ""
+
+    }
+    function primeiraV(){
+        if (cadVi[0] == "") {
+            revelar.innerHTML = `Ainda não viajou <br>`
+        }else if(cadVi[0] != ""){
+            revelar.innerHTML = `${cadVi[0]} <br>`
+        }
+    }
+    function terceiraV() {
+        if (cadVi.length<2) {
+            revelar.innerHTML+=`Ainda não viajou tres vezes <br>`
+        } else if(cadVi.length>2){
+            revelar.innerHTML +=`${cadVi[2]} <br>`
+        }
+    }
+    function ultimaV() {
+        if (cadVi[0] == "") {
+            revelar.innerHTML = `Ainda não viajou <br>`
+        }else if(cadVi[0] != ""){
+            revelar.innerHTML += `${cadVi[cadVi.length - 1]}<br>`        }
+
+    }
+</script>

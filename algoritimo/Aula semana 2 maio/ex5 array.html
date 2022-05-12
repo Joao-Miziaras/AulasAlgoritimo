@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Cadastre seus filmes favoritos
+    <input type="text" name="" id="filmeFavoritos"> <br>
+    <button onclick="cadastrar()">Cadastrar</button> <br>
+    <span id="revelar"></span>
+</body>
+</html>
+<script>
+    var filmes =[];
+    function cadastrar() {
+        filmes.push(filmeFavoritos.value);
+        filmeFavoritos.value = ""
+        if(filmes.length <3){
+            revelar.innerHTML = `Seu filme favorito: ${filmes[0]} <br> 
+            Seu 3º filme favorito: Ainda não existe <br>
+            Total de filmes cadastrados: ${filmes.length}`
+        } else{
+            revelar.innerHTML = `Seu filme favorito: ${filmes[0]} <br> 
+            Seu 3º filme favorito: ${filmes[2]} <br>
+            Total de filmes cadastrados: ${filmes.length}`
+        }
+
+    }
+</script>
