@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex 13</title>
+</head>
+<body>
+    Indique o resultado
+    <select name="" id="partida">
+        <option value="0">Selecione um valor</option>
+        <option value="1">Vitoria</option>
+        <option value="2">Derrota</option>
+        <option value="3">Empate</option>
+    </select>
+    <button onclick="registrar()">Registrar jogo</button> <br>
+    <span id="revelar"></span>
+</body>
+</html>
+<script>
+    var pa = Number(partida.value)
+    var resultados = [];
+    var soma = 0
+    var vitoria = 3
+    var empate = 1
+    function registrar() {
+        resultados.push(partida.value)
+        if(partida.value == 0){
+            alert('escolha um resultado')
+        } else if(partida.value == 1){
+                revelar.innerHTML = `O time teve: ${resultados.indexOf('vitoria')} vitórias, ${resultados.indexOf('1')} empates, ${resultados.indexOf('0')} derrotas <br> Pontuação total: ${soma + vitoria} pontos <br> Aproveitamento: Y%`
+        } else if (partida.value == 2){
+                
+        }
+
+    } 
+</script>

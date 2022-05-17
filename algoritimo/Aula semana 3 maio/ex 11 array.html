@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex11</title>
+</head>
+<body>
+    Preço do estoque
+    <input type="text" name="" id="preco">
+    <button onclick="cadastrar()">Cadastrar</button>
+    <button onclick="atualizar()">Atualizar estoque</button>
+    <span id="revelar"></span>
+</body>
+</html>
+<script>
+    var soma=0
+    var produtos = [];
+    function cadastrar() {
+        soma += Number(preco.value);
+        produtos.push(preco.value)
+        preco.value = ""
+    }
+    function atualizar(){
+        revelar.innerHTML = `Você tem ${produtos.length} cadastrados em estoque. <br> ${soma}`
+    }
+</script>
