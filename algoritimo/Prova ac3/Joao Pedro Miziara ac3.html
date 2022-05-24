@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AC3_1CCO</title>
+</head>
+
+<body>
+    <h2>Hideo Morangos</h2>
+    Entre com a temperatura da estufa: <input id="ipt_temp">
+    <button onclick="cadastrar()">Registrar</button> <br><br>
+
+    Entre com o número de uma ocorrência: <input id="ipt_ocor">
+    <button onclick="verificar()">Verificar</button> <br>
+    <div id="div_ocor"></div><br><br>
+
+    Intervalo de ocorrências para análise
+    <input id="ipt_ocor_de"> <input id="ipt_ocor_ate">
+    <button onclick="ocorrencias()">Analisar Ocorrências</button> <br>
+    <div id="div_msg"></div>
+
+</body>
+
+</html>
+<script>        
+    var goOn = true // var de validação
+    var prosseguir = true
+    var seguir = true
+    var temperaturas = []// vetor
+    var maior = -9999
+    var menor = 9999
+    function cadastrar() {
+        var temp = Number(ipt_temp.value)   // var para o input de temperatura
+        // validaçoes
+        if(ipt_temp.value == ""){    
+            goOn= false 
+            alert("Insira um valor para proseguir")
+        }else if (temp<10) {
+            goOn = false
+            alert("Ligar urgente os aquecedores")
+        }else if(temp>30){
+            goOn = false
+            alert("Ligar urgente os resfriadores")
+        }else if(temp>=10 && temp<=14 || temp>=26 && temp<=30){
+            goOn = true
+        }else if(temp>=15 && temp<=25){
+            goOn = true
+            alert("Perfeito!!! Temperatura dentro do intervalo ideal")
+        } 
+        // programa seguindo em frente
+        if (goOn == true) {
+            console.log('deu certo')
+            temperaturas.push(ipt_temp.value);
+            ipt_temp.value = ""; 
+
+            if(temp<menor){
+            menor = temperaturas
+        }   if (temp >maior) {
+            maior = temperaturas
+        }
+        }
+    }
+    function verificar(){
+        var ocorrencia = Number(ipt_ocor.value)
+        var checagem = ocorrencia - 1
+        
+        if (ocorrencia > temperaturas.length) {
+            seguir = false
+            div_ocor.innerHTML = `A ocorência ${ocorrencia} não foi registrada` 
+        } if(ocorrencia == ""){
+            seguir= false
+            alert("Insira um valor antes")
+            div_ocor.innerHTML = ""
+        }else if(ocorrencia <=temperaturas.length){
+            seguir = true
+        }
+        if(seguir == true){
+            div_ocor.innerHTML = `Na ocorrência ${ocorrencia} a temperatura registrada é ${temperaturas[checagem]}`
+        }
+    }
+    function ocorrencias(){
+        var ocoD=ipt_ocor_de.value 
+        var ocoA= ipt_ocor_ate.value  
+        if(temperaturas.length == 0){
+            prosseguir = false
+            alert("Antes de analisar faça o cadastro das temperaturas")
+        }if(ocoA<ocoD){
+            prosseguir = false
+            alert("Informar o intervalo de ocorrências corretamente")
+        }if(ocoA == "" && ocoD == ""){
+            prosseguir = false
+            alert("Insira as ocorrencias")
+        } if(ocoA>ocoD){
+            prosseguir = true
+        }
+     if (prosseguir == true) {
+        // deu errado :(
+    }
+}
+</script>

@@ -1,0 +1,44 @@
+
+a. Tenha um campo para o usuário informar a temperatura da estufa
+
+b. Tenha o botão “Registrar” que quando clicado irá validar a temperatura da seguinte forma:
+
+1. Se a temperatura estiver abaixo de 10 graus emitir um alert de erro com a mensagem “Ligar urgente os
+aquecedores” e não seguir em frente
+
+2. Se a temperatura estiver entre 15 e 25 graus emitir um alert com o aviso “Perfeito!!! Temperatura dentro
+do intervalo ideal” e seguir em frente.
+
+3. Se a temperatura estiver acima de 30 graus emitir um alert de erro com a mensagem “Ligar urgente os
+resfriadores” e não seguir em frente.
+
+4. Para os demais casos não emitir alert e seguir em frente.
+
+c. Guardar a temperatura em um vetor.
+
+d. Tenha um campo para o usuário entrar com o número de uma ocorrência e um botão “Verificar” que quando
+clicado irá mostrar uma das duas mensagens abaixo:
+- “A ocorrência XX não foi registrada” Esta mensagem será emitida caso a o vetor ainda não tenha a
+ocorrência informada pelo usuário.
+- “Na ocorrência XX a temperatura registrada é 99,9” ➔ Esta mensagem será emitida caso a ocorrência XX já || usar tofixed
+exista no vetor
+OBS: Lembre-se que o usuário considera como ocorrência 1 o primeiro registro que ele fez.
+
+Parte II – (4 pontos) - Complemente o programa acima para que o Sr. Hideo tenha uma experiencia ainda melhor na
+utilização do seu programa, para isso:
+a. Tenha dois campos para o usuário entrar com o intervalo de ocorrência que ele quer analisar, por exemplo: 2 –
+7 ➔ nesse casso o usuário quer analisar desde a 2ª temperatura cadastrada até a 7ª temperatura cadastrada.
+b. Tenha um botão “Analisar Ocorrências” que quando clicado ira:
+1. Verificar se alguma temperatura foi cadastrada, caso contrário, emitir alert de erro com a mensagem
+“Antes de Analisar faça o cadastro das temperaturas” e não seguir em frente
+2. Verificar se o intervalo é crescente e válido, caso contrário, emitir alert de erro com a mensagem
+“Informar o intervalo de ocorrências corretamente” e não seguir em frente
+3. Para cada ocorrência do intervalo informado emitir a mensagem abaixo:
+“A XXª ocorrência tem registrada a temperatura 99,9”
+4. Abaixo da mensagens do item anterior emitir o seguinte resumo:
+Resumo do intervalo de ocorrências
+Inicial: XXX Final: XXX
+Menor Temperatura do intervalo: 99,9
+Maior Temperatura do intervalo: 99,9
+Qtde de temperaturas cadastradas no intervalo: XXX
+Média das Temperaturas do intervalo: 99,9
