@@ -13,4 +13,12 @@
     <div id="revelar"></div>
 </body>
 </html>
-<script src=""></script>
+<script>
+    function analise() {
+        var sd = saldoConta.value
+        var vd = valorDebito.value
+        var calc = sd - vd
+        
+        calc > 0 ? revelar.innerHTML = `<i style= "color: blue">O saldo atual da conta corrente é ${calc}<i>` : revelar.innerHTML = `<i style= "color: red">O saldo atual da conta corrente é ${calc}<i>`
+    }
+</script>
