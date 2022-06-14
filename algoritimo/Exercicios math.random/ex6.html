@@ -1,0 +1,26 @@
+<html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="sorte()">Sortear momento do dia</button>
+    <div id="apa"></div>
+</body>
+</html>
+<script>
+function sorte() {
+    var ran = parseInt(Math.random()*23)
+    if(ran<=11){
+        apa.innerHTML = `Bom dia flor do dia já são ${ran}`
+    } else if(ran >11 && ran <=17){
+        apa.innerHTML = `Boa tarde, já vai tarde, são ${ran}`
+    } else{
+        apa.innerHTML = `Boa noite, durma bem! são ${ran}`
+    }
+}
+</script>

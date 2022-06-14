@@ -1,0 +1,57 @@
+<html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <H1>Vamos jogar jokenpo</H1>
+    <button onclick="sorte()"> Reusltado</button>
+    <div id="apa"></div>
+    <div id="apa2"></div>
+    <div id="apa3"></div>
+
+</body>
+</html>
+<script>
+function sorte() {
+    var ran = parseInt(Math.random()*3+1)
+    if (ran==1) {
+        apa.innerHTML = `papel`
+    } else if(ran==2 ){
+        apa.innerHTML = `pedra`
+    } else if(ran == 3){
+        apa.innerHTML = `tesoura`
+
+    }
+    var ran2 = parseInt(Math.random()*2+1)
+    if (ran2==1) {
+        apa2.innerHTML = `papel`
+    } else if(ran2==2 ){
+        apa2.innerHTML = `pedra`
+    } else if(ran2 == 3){
+        apa2.innerHTML = `tesoura`
+
+    }
+    if (ran == ran2) {
+        apa3.innerHTML = `Empate`       
+    } else if(ran == 2 && ran2 ==3){
+        apa3.innerHTML = `Vitoria do primeiro jogador`       
+    } else if(ran == 1 && ran2 == 2){
+        apa3.innerHTML = `Vitoria do primeiro jogador`       
+    } else if(ran == 3 && ran2 == 1){
+        apa3.innerHTML = `Vitoria do primeiro jogador`       
+    }  else if(ran == 1 && ran2 ==3){
+        apa3.innerHTML = `Vitoria do segundo jogador`       
+    } else if(ran == 2 && ran2 == 1){
+        apa3.innerHTML = `Vitoria do segundo jogador`       
+    } else if(ran == 3 && ran2 == 2){
+        apa3.innerHTML = `Vitoria do segundo jogador`       
+    }
+}
+    
+
+</script>
